@@ -7,7 +7,7 @@ One of the most exciting areas in all of data science right now is wearable comp
 
 A full description is available at the [site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) where the data was obtained.
 
-This repo contains the run_analysis.R R script that does the following:
+This repo contains the run_analysis.R script that does the following:
 
 * Merges the training and the test sets to create one data set.
 * Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -17,4 +17,4 @@ This repo contains the run_analysis.R R script that does the following:
 
 **Note: All data files are kept in ./data.**
 
-CodeBook.md describes the variables, data and any transformations or work that were performed to clean up the data for this project.
+[CodeBook.md](https://github.com/charl/getting-and-cleaning-data/blob/master/CodeBook.md) describes the variables, data and any transformations or work that were performed to clean up the data for this project.

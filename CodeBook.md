@@ -7,6 +7,8 @@ Unless specified otherwise, all commands were run from within a R CLI session (o
 
 **Note: All data files are kept in ./data.**
 
+For more information on the purpose of the project and how to run the R script, see [README.md](https://github.com/charl/getting-and-cleaning-data/blob/master/README.md).
+
 Save/Extract Raw Data
 -
 
@@ -24,5 +26,4 @@ The following steps we followed to download and extract the [raw data](https://d
 [2] "UCI HAR Dataset"
 ```
 
-The raw [data file](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) is a little big so I have added an exclusion entry to the project's .gitignore file to avoid pushing the file to Github.
-
+The raw [data file](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) is a little big so an exclusion entry was added to the project's .gitignore file to avoid pushing the file to Github.
