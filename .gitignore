@@ -1,5 +1,6 @@
-# History files.
+# History/Data files.
 .Rhistory
+.RData
 
 # Example code in package build process.
 *-Ex.R
@@ -12,3 +13,4 @@
 
 # Ignore all archived raw data files.
 data/*.zip
+data/step5-summary.table.txt
