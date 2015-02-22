@@ -147,7 +147,7 @@ Once done the tidy data set for numbers 1-4 will be stored in the **totalData** 
  $ fBodyBodyGyroJerkMag-std() : num  -0.991 -0.996 -0.995 -0.995 -0.995 ...
 ```
 
-The tidy data set for number 5 can be dound in the **summary** variable:
+The tidy data set for number 5 can be found in the **summary** variable:
 
 ```r
 > str(summary)
