@@ -47,7 +47,7 @@ Running the Analysis
 
 To run the analysis you simply need the [run_analysis.R](https://github.com/charl/getting-and-cleaning-data/blob/master/run_analysis.R) script and the extracted data (see Save/Extract Raw Data) in the ./data directory.
 
-From the working directory where you saved the script (and the data in ./data), open a R console session and run:
+From the working directory where you saved the script (and assuming you extracted the data in ./data), open a R console session and run:
 
 ```r
 source("run_analysis.R")
