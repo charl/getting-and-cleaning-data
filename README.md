@@ -15,6 +15,10 @@ This repo contains the run_analysis.R script that does the following:
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+Unless specified otherwise, all commands were run from within a R CLI session (on GNU Linux).
+
+All data transformations are documented in the form of comments in [run_analysis.R](https://github.com/charl/getting-and-cleaning-data/blob/master/run_analysis.R).
+
 **Note: All data files are kept in ./data.**
 
 [CodeBook.md](https://github.com/charl/getting-and-cleaning-data/blob/master/CodeBook.md) describes the variables, data and any transformations or work that were performed to clean up the data for this project.
@@ -49,7 +53,25 @@ From the working directory where you saved the script (and the data in ./data), 
 source("run_analysis.R")
 ```
 
-This will take a while as the script performs the required data processing and analysis set out in steps 1-5 above. Once done the tidy data set for numbers 1-4 will be stored in the **totalData** data frame:
+This will take a while as the script performs the required data processing and analysis set out in steps 1-5 above. You will most likely see the following warnings in the console that can be safely ignored:
+
+```r
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:MASS’:
+
+    select
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+```
+
+Once done the tidy data set for numbers 1-4 will be stored in the **totalData** data frame:
 
 ```r
 > str(totalData)
@@ -132,7 +154,7 @@ The tidy data set for number 5 can be dound in the **summary** variable:
 Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	40 obs. of  69 variables:
  $ Subject                    : int  1 2 3 4 4 5 6 7 7 8 ...
  $ Activity                   : Factor w/ 6 levels "LAYING","SITTING",..: 3 3 3 2 3 3 3 2 3 2 ...
- $ DataType                   : num  1 2 1 2 2 1 1 1 1 1 ...
+ $ DataType                   : chr  "Training" "Test" "Training" "Test" ...
  $ tBodyAcc-mean()-X          : num  0.266 0.273 0.273 0.273 0.275 ...
  $ tBodyAcc-mean()-Y          : num  -0.0183 -0.0191 -0.0179 -0.0196 -0.013 ...
  $ tBodyAcc-mean()-Z          : num  -0.108 -0.116 -0.106 -0.113 -0.105 ...

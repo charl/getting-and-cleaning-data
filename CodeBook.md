@@ -5,6 +5,8 @@ This code book describes the variables, data and any transformations or work tha
 
 Unless specified otherwise, all commands were run from within a R CLI session (on GNU Linux).
 
+All data transformations are documented in the form of comments in [run_analysis.R](https://github.com/charl/getting-and-cleaning-data/blob/master/run_analysis.R).
+
 **Note: All data files are kept in ./data.**
 
 For more information on the purpose of the project and how to run the R script, see [README.md](https://github.com/charl/getting-and-cleaning-data/blob/master/README.md).
