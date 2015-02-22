@@ -8,6 +8,9 @@
 ## * Appropriately labels the data set with descriptive variable names.
 ## * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+## Libraries.
+suppressWarnings(library(dplyr))  ## Ignore any "object is masked" warnings.
+
 ## Process the training data.
 ##
 ## Read the list of all features from ./data/UCI\ HAR\ Dataset/features.txt into a table.
@@ -81,5 +84,16 @@ testData <- cbind(Subject=subjects[, "Subject"], testData)
 
 ## Merge both data sets.
 ##
-## Merge the training and test data sets into totalData.
+## Merge the training and test data sets into totalData that is a long form tiny data set.
 totalData <- rbind(trainData, testData)
+
+## Summarise totalData.
+##
+## Create a second tidy data set with the average of each variable for each activity and each subject from totalData.
+summary <- totalData %>% group_by(Subject, Activity) %>% summarise_each(funs(mean))
+
+## Transform all DataType entries to a more descriptive string label.
+summary$DataType <- ifelse(summary$DataType == 1, "Training", "Test")
+
+## Write the summarised data to ./data/step5-summary.table.
+write.table(summary, "./data/step5-summary.table.txt", row.name=FALSE)
